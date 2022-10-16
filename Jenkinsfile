@@ -1,6 +1,6 @@
 pipeline{
   agent { label 'java_11'}
-  trigger {cron('30 17 * * 1-5'')}
+  triggers {cron('30 17 * * 1-5'')}
   stages{
     stage('shopizer'){
        steps{

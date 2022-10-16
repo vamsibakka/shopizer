@@ -1,6 +1,6 @@
 pipeline{
   agent { label 'java_11'}
-  trigger {pollscm('5 * * * 1-5'')}
+  triggers {pollscm('5 * * * 1-5'')}
   stages{
     stage('shopizer'){
        steps{

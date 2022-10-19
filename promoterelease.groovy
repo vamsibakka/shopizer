@@ -16,6 +16,7 @@ pipeline {
                     hs 'git branch -a'
                     sh 'git checkout release'
                     sh 'git merge develop --no-ff'
+                    sh 'git log -3 --oneline'
                 
                 // sh   // merging the git develop branch to release branch without fastfarward.
                 //sh 'mvn clean package'

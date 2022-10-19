@@ -10,8 +10,7 @@ pipeline {
         }
             stage ('merge') {
             steps{
-                sh
-                '''
+                sh '''
                     git checkout release
                     git merge develop --no-ff
                 ''' 

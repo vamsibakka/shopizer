@@ -2,7 +2,7 @@ pipeline {
     agent any
     triggers { pollSCM ('H 17 * * 1-5')}
     stages{
-        stag {
+        stage {
             steps {
                 
                 git branch : 'master', url: 'https://github.com/vamsibakka/shopizer.git'

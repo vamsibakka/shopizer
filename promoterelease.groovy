@@ -1,10 +1,10 @@
 pipeline {
     agent any
-    triggers { pollSCM ('* 17 * * 1-5')}
+    triggers { pollSCM ('H 17 * * 1-5')}
     stages{
         stage ('git clone') {
             steps {
-                git branch : 'release', url : 'git@github.com:vamsibakka/shopizer.git'
+                git branch : 'release', url : 'https://github.com/vamsibakka/shopizer.git'
             }
         }
         stage ('merge') {

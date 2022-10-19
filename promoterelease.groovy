@@ -5,15 +5,15 @@ pipeline {
         stage ('clone') {
             steps {
                 
-                git branch : 'master', url: 'https://github.com/vamsibakka/shopizer.git'
+                git clone "https://github.com/vamsibakka/shopizer.git"
             }
         }
             stage ('merge') {
             steps{
-                sh '''
-                    git checkout release
-                    git merge develop --no-ff
-                ''' 
+            
+                    sh ('git checkout release')
+                   sh ( 'git merge develop --no-ff')
+                
                 // sh   // merging the git develop branch to release branch without fastfarward.
                 //sh 'mvn clean package'
             }

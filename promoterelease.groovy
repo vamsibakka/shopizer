@@ -10,8 +10,12 @@ pipeline {
         }
             stage ('merge') {
             steps{
-                sh 'git checkout release'
-                sh 'git merge develop --no-ff'  // merging the git develop branch to release branch without fastfarward.
+                sh
+                '''
+                    git checkout release
+                    git merge develop --no-ff
+                ''' 
+                // sh   // merging the git develop branch to release branch without fastfarward.
                 //sh 'mvn clean package'
             }
         }

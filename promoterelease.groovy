@@ -5,12 +5,15 @@ pipeline {
         stage ('clone') {
             steps {
                 
-                git url:'git@github.com:vamsibakka/shopizer.git'
+                git branch:'master', url:'git@github.com:vamsibakka/shopizer.git'
             }
         }
             stage ('merge') {
             steps{
             
+                    sh 'git checkout develop'
+                    sh 'git checkout master'
+                    hs 'git branch -a'
                     sh 'git checkout release'
                     sh 'git merge develop --no-ff'
                 

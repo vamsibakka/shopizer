@@ -5,7 +5,7 @@ pipeline {
         stage ('clone') {
             steps {
                 
-                git branch:'master', url:'https://github.com/vamsibakka/shopizer.git'
+                git branch:'master', url:'git@github.com:vamsibakka/shopizer.git'
             }
         }
             stage ('merge') {

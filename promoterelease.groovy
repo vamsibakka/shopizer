@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label 'java_11'}
     triggers { pollSCM ('H 17 * * 1-5')}
     stages{
         stage ('clone') {

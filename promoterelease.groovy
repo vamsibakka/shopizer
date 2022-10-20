@@ -16,7 +16,7 @@ pipeline {
                     sh 'git branch -a'
                     sh 'git checkout release'
                     sh 'git merge develop --no-ff'
-                    sh 'git push -u orogin release'
+                    sh 'git push origin release'
                 
                 
             }
